@@ -1,0 +1,293 @@
+/*  *是all的意思，整个页面上所有的标签全部选择。
+     目的是让所有东西与上一层东西内边距、外边距都清0，（上左下右都为0）*/
+*{
+    padding: 0px;
+    margin: 0px;
+    /*怪异盒子模型 目的是给浮动层的图片设置外边距的时候，浮动层的高不会改变 */
+    box-sizing: border-box;
+}
+
+/*网页制作-网页头部-开始*/
+/*页面头部-高度*/
+header{
+    height: 60px;
+    /*background-color: red;*/
+}
+/*页面头部-安全区域  auto是自动调整的意思*/
+.safe-area{
+    height: 60px;
+    width: 1200px;
+    /*background-color: yellow;*/
+    margin: 0 auto;
+}
+.heatertext{
+    text-align: right;
+    color: #666666;
+    font-size:14px;
+    /*设置i和span的父元素行高，从而让文本和图标垂直居中 */
+    line-height: 60px;
+}
+/*  .heatertext>*意思是选择headertext下面的所有元素，让它们之间垂直居中 */
+.heatertext>*{vertical-align: middle;}
+
+.icon-dianhua{
+    font-size:20px;
+    color: #999999;
+    margin-right:12px;
+}
+/*第一个文本和第二个文本之间的间距*/
+header .mr20{
+    margin-right:20px;
+}
+/* 网页头部-结束 */
+
+
+/* Banner 开始 */
+/*001 背景层 */
+#Banner{
+    height: 940px;
+    background-image: url("../image/bj.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    /*去掉背景图片旁边的空隙 */
+    background-size: cover;
+    text-align: center;
+}
+/*文字处理 */
+.wenzi1{
+    padding-top: 140px;
+}
+.wenzi2{
+    font-size: 28px;
+    color: #43698f;
+    padding: 30px 0 90px;
+}
+/*按钮处理 */
+/* 让两个按钮间距为0,后面可以根据实际需要调整间距 */
+.button-group{
+font-size: 0;
+}
+#Banner button{
+    width: 280px;
+    height: 60px;
+    border-radius: 10px;
+    outline: none;
+    background-color: white;
+    font-size: 24px;
+    color: #24a9f1;
+}
+/*图标大小、居中 */
+.button-group i{
+    font-size: 36px;
+    vertical-align: -2px;
+}
+/*按钮间距设置 */
+#Banner button:first-child{
+    margin-right: 24px;
+}
+/*文字处理 */
+.wenzi3{
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: white;
+    margin: 50px 0 16px;
+}
+/*选择属性ewm下面的图片img */
+.ewm>img{
+    width: 200px;
+}
+/* Banner 结束 */
+
+
+
+        /*开始制作Banner下面几个楼层，因为楼层安全距离、排版方式（左右式）、 都一样，
+          所以写在载最上面 公用，这样后面重复的样式不用写太多 */
+/*安全区域 宽1200px，外边距：上下0，左右自动居中 */
+.safearea{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*左浮动 */
+.fl-left{
+    float: left;
+}
+/*右浮动 */
+.fl-right{
+    float: right;
+}
+h1{
+    font-size: 36px;
+    font-weight: inherit;
+    color: white;
+    padding-bottom: 20px;
+}
+p{
+    font-size: 18px;
+    color: white;
+}
+/* 文字对齐方式 */
+.lcwz01,.lcwz03{
+    text-align: right;
+}
+.lcwz02,.lcwz04,.lcwz05{
+    text-align: left;
+}
+
+
+/*第一层 开始 */
+#floor-01{
+    height: 1000px;
+    background-color: #4eb55f;
+}
+#floor-01 .tupian1{
+    padding-top: 148px;
+}
+#floor-01 h1{
+    padding-top: 416px;
+}
+/*第一层 结束 */
+
+
+/*第二层 开始 */
+#floor-02{
+    height: 1000px;
+    background-color: #eb9c36;
+}
+#floor-02 h1{
+    padding-top: 450px;
+}
+#floor-02 .tupian2{
+    padding-top: 208px;
+}
+/*第二层 结束 */
+
+
+/*第三层 开始 */
+#floor-03{
+    height: 1000px;
+    background-color: #ed683f;
+}
+#floor-03 .tupian3{
+    padding-top: 190px;
+}
+#floor-03 h1{
+    padding-top: 448px;
+}
+/*第三层 结束 */
+
+
+/*楼层四 开始 */
+#floor-04{
+    height: 1000px;
+    background-color: #4c9bd7;
+}
+#floor-04 .lcwz04{
+    padding-top: 432px;
+}
+#floor-04 .tupian4{
+    padding-top: 248px;
+}
+/*楼层四 结束 */
+
+
+/*楼层五 开始 */
+#floor-05{
+    height: 1000px;
+    background-color: #356b95;
+}
+#floor-05 .tupian5{
+    padding-top: 314px;
+}
+#floor-05 h1{
+    font-size: 28px;
+    padding-top: 404px;
+}
+#floor-05 span{
+    font-size: 18px;
+    color: white;
+}
+#floor-05 i{
+    color: white;
+    font-size: 20px;
+}
+.KtoH{
+    display: inline-block;
+}
+/*选择属性f5下面的第一个div子元素，让它垂直顶对齐 */
+.f5>div:first-child{
+    vertical-align: top;
+}
+/*设置文字的行高，2em表示行高为文字大小的1.8倍 */
+.lcwz05{
+    line-height: 2em;
+}
+.jianju1 {
+    /*margin: 20px 0 20px;*/
+}
+/*楼层五 结束 */
+
+
+/*最底层 开始*/
+#last{
+    height: 80px;
+    line-height: 80px;
+    background-color: #295373;
+    text-align: center;
+}
+#last span{
+    font-size: 12px;
+    color: #999999;
+}
+/*最底层 结束*/
+
+
+/*浮动层 开始*/
+#fixed{
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    /*浮动层颜色设置：rgb都是0，表示黑色，a就是透明度（0-1），0.5表示透明度为50% */
+    background-color: rgba(0,0,0,0.5);
+    /*让元素都水平居中 */
+    text-align: center;
+    /*让文字和按钮、按钮和按钮之间的间距都为0，后面好根据自己需要调整间距 */
+    font-size: 0;
+    padding-top: 20px;
+}
+/*>* 表示选择fixed下的所有元素 */
+#fixed>*{
+    vertical-align: middle;
+}
+#fixed span{
+    font-size: 18px;
+    color: white;
+    padding-right: 46px;
+}
+#fixed button{
+    width: 220px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+}
+#fixed button  i{
+    font-size: 26px;
+    color: #24a9f1;
+}
+/*选择button下的文字 */
+#fixed button{
+    font-size: 18px;
+    color: #24a9f1;
+}
+#fixed .b1{
+     margin-right: 32px;
+}
+#fixed .b2{
+    margin-right: 86px;
+}
+#fixed img{
+    width: 110px;
+}
+/*浮动层 结束*/
